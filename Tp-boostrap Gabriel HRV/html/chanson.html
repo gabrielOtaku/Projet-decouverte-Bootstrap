@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <!-- CSS  -->
+  <link rel="stylesheet" href="../css/monCSS.css">
+  <link rel="stylesheet" href="../css/chanson.css">
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>TP1- bootstrap Gabriel</title>
+  <link rel="icon" type="image/png" href="../ico/logo.ico"/>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../Accueil.html">
+        <img src="../images/logo.png" alt="Mon Logo" class="logo" title="Retour Menu principal" width="60" height="30">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../Accueil.html">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/biographie.html">Biographie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/chanson.html">Chanson</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/spectacle.html">Spectacle</a>
+          </li>
+        </ul>
+
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Rechercher</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenu MP3 -->
+  <main>
+    <section class="container text-center py-5">
+      <h2 class="mb-4">Mon Audio</h2>
+
+      <div class="audio-player-container">
+        <audio id="audio-file" src="../media/song.mp3" preload="auto"></audio>
+
+        <!-- Bouton lecture -->
+        <button id="play-btn" class="btn btn-primary rounded-circle mb-3">
+          <i class="bi bi-play-fill fs-3"></i>
+        </button>
+
+        <!-- Barre de progression -->
+        <div class="progress my-3" style="height: 6px;">
+          <div id="progress-bar" class="progress-bar bg-info" role="progressbar" style="width: 0%;"></div>
+        </div>
+
+        <div id="audio-visualizer" class="visualizer"></div>
+      </div>
+
+      <!-- Lien vers le fichier audio -->
+      <div class="Lyrics mt-4">
+        <a href="../media/song.mp3" target="_blank" class="btn btn-outline-secondary">
+          <i class="bi bi-music-note-beamed"></i> Accéder à la musique
+        </a>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+ 
+  <script src="../js/MyJS.js"></script>
+</body>
+</html>

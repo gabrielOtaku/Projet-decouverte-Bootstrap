@@ -1,0 +1,60 @@
+:root {
+  --style-text: "Poppins", sans-serif;
+  --style-title: "Roboto", sans-serif;
+  --background-color: #fff;
+  --background-color2: rgba(0, 0, 0, 0.8); 
+  --text-gradient: linear-gradient(
+    90deg,
+    rgba(2, 14, 26, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(8, 13, 82, 1) 51%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--style-text);
+  font-size: 1.05em;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* ====== Anim Nav ====== */
+nav {
+  animation: slideDown 0.6s ease-out;
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* ====== Logo ====== */
+.navbar img {
+  cursor: pointer;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.navbar img:hover {
+  transform: scale(1.2) rotate(-3deg);
+  filter: drop-shadow(0 0 6px rgba(0, 212, 255, 0.6));
+}
